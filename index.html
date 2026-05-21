@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Mariya Ulfa Dwi Shafarani | Portofolio & Profil</title>
+    <meta name="description" content="Portofolio resmi Mariya Ulfa Dwi Shafarani. Lulusan PGPAUD UPI Purwakarta, Guru PAUD di TK Al Hikmah, dan Owner dari Shafa Store.">
+    <meta name="keywords" content="Mariya Ulfa Dwi Shafarani, Guru PAUD, TK Al Hikmah, Shafa Store, PGPAUD UPI Purwakarta, Jurnal PAUD, Portofolio">
+    <meta name="author" content="Mariya Ulfa Dwi Shafarani">
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#ec4899', // Pink-500
+                        primaryDark: '#be185d', // Pink-700
+                        accent: '#f43f5e', // Rose-500
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Gaya Kustom */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .hero-blob {
+            background: linear-gradient(to right, #ec4899, #f9a8d4);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: morph 8s ease-in-out infinite;
+        }
+        @keyframes morph {
+            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+            67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+        }
+    </style>
+</head>
+<body class="font-poppins text-slate-800 bg-rose-50/30 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigasi -->
+    <header class="fixed w-full top-0 z-50 glass-nav border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold text-primaryDark tracking-tight flex items-center gap-2">
+                    <span class="bg-primary text-white p-1.5 rounded-lg">
+                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                    </span>
+                    Mariya.
+                </a>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-slate-600 hover:text-primary font-medium transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-slate-600 hover:text-primary font-medium transition-colors">Tentang</a>
+                    <a href="#pengalaman" class="text-slate-600 hover:text-primary font-medium transition-colors">Pengalaman</a>
+                    <a href="#portofolio" class="text-slate-600 hover:text-primary font-medium transition-colors">Portofolio</a>
+                    <a href="#jurnal" class="text-slate-600 hover:text-primary font-medium transition-colors">Jurnal</a>
+                    <a href="#kontak" class="px-5 py-2.5 bg-primary text-white font-medium rounded-full hover:bg-primaryDark transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Hubungi Saya</a>
+                </nav>
+
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#beranda" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Beranda</a>
+                <a href="#tentang" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Tentang</a>
+                <a href="#pengalaman" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Pengalaman</a>
+                <a href="#portofolio" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Portofolio</a>
+                <a href="#jurnal" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Jurnal</a>
+                <a href="#kontak" class="mobile-link block mt-4 text-center px-4 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primaryDark">Hubungi Saya</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Bagian Beranda -->
+        <section id="beranda" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Konten Teks -->
+                    <div class="order-2 lg:order-1 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-50 text-primary font-medium text-sm mb-6 border border-pink-100">
+                            <span class="relative flex h-3 w-3">
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                            </span>
+                            Terbuka untuk Kolaborasi & Proyek Baru
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-slate-900 leading-tight">
+                            Halo, Saya <br/>
+                            <span class="text-primary relative inline-block">
+                                Mariya Ulfa D.S.
+                                <svg class="absolute w-full h-3 -bottom-1 left-0 text-pink-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 15 100 5" stroke="currentColor" stroke-width="8" fill="transparent"/></svg>
+                            </span>
+                        </h1>
+                        <p class="mt-6 text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Guru PAUD berdedikasi di TK Al Hikmah, Peneliti Pendidikan, & Wirausahawan di balik Shafa Store. Menggabungkan ilmu pedagogik dan kreativitas untuk menciptakan pengalaman yang bermakna.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#portofolio" class="px-8 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primaryDark transition-colors shadow-lg shadow-pink-500/30 flex items-center justify-center gap-2">
+                                Lihat Karya Saya <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#jurnal" class="px-8 py-3.5 bg-white text-slate-700 font-semibold rounded-xl border-2 border-slate-200 hover:border-primary hover:text-primary transition-colors flex items-center justify-center gap-2">
+                                Baca Publikasi <i data-lucide="book-open" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Gambar / Visual -->
+                    <div class="order-1 lg:order-2 flex justify-center relative">
+                        <!-- Elemen Dekoratif -->
+                        <div class="absolute inset-0 bg-pink-100 rounded-full blur-3xl opacity-50 w-72 h-72 lg:w-96 lg:h-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                        
+                        <div class="relative w-72 h-72 lg:w-[400px] lg:h-[400px] hero-blob p-2 shadow-2xl flex items-center justify-center bg-gradient-to-tr from-pink-400 to-rose-300">
+                            <!-- Placeholder Foto -->
+                            <img src="https://media.licdn.com/dms/image/v2/D5603AQFNktJknNG_qQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1692183214217?e=2147483647&v=beta&t=Aqw8iUXj9J0L09SiDJmMkvkI_aGbfw2hjLmHKNSEXOU" alt="" class="w-full h-full object-cover rounded-[inherit] border-4 border-white shadow-inner mix-blend-overlay opacity-80">
+                            
+                            <!-- Lencana Mengambang -->
+                            <div class="absolute -bottom-4 -left-8 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+                                <div class="bg-rose-100 p-2 rounded-full text-accent">
+                                    <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-xs text-slate-500 font-medium">Alumni</p>
+                                    <p class="text-sm font-bold text-slate-800">PGPAUD UPI</p>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-10 -right-8 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce" style="animation-duration: 4s; animation-delay: 1s;">
+                                <div class="bg-pink-100 p-2 rounded-full text-primary">
+                                    <i data-lucide="store" class="w-6 h-6"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-xs text-slate-500 font-medium">Owner</p>
+                                    <p class="text-sm font-bold text-slate-800">Shafa Store</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Tentang -->
+        <section id="tentang" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Tentang Saya</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Mengenal Lebih Dekat</h3>
+                    <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5 relative group">
+                        <div class="absolute inset-0 bg-pink-500 rounded-3xl transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="" class="relative z-10 rounded-3xl shadow-lg w-full object-cover h-[500px] grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    
+                    <div class="lg:col-span-7 space-y-6">
+                        <h4 class="text-2xl font-bold text-slate-800">Pendidikan, Penelitian, & Kreativitas Menjadi Satu</h4>
+                        <p class="text-slate-600 leading-relaxed text-lg">
+                            Saya adalah <strong class="text-slate-900">Mariya Ulfa Dwi Shafarani</strong>, lulusan Pendidikan Guru Pendidikan Anak Usia Dini (PGPAUD) dari <strong>Universitas Pendidikan Indonesia (UPI) Kampus Purwakarta</strong>. Latar belakang akademik saya tidak hanya fokus pada praktik mengajar, tetapi juga pada riset dan publikasi ilmiah terkait perkembangan anak.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-lg">
+                            Saat ini, dedikasi saya terbagi menjadi dua dunia yang saling melengkapi: membimbing generasi masa depan sebagai <strong>Guru PAUD di TK Al Hikmah</strong>, dan mengasah jiwa wirausaha sebagai <strong>Owner Shafa Store</strong>. Keberagaman peran ini menuntut kepekaan komunikasi, analisis kebutuhan, dan dedikasi yang tinggi.
+                        </p>
+                        
+                        <!-- Sorotan Singkat -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6">
+                            <div class="bg-pink-50 p-4 rounded-xl border border-pink-100 text-center">
+                                <i data-lucide="book-open" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                                <span class="block text-sm text-slate-500">Pendidikan & Riset</span>
+                                <span class="block font-bold text-slate-800">PGPAUD UPI</span>
+                            </div>
+                            <div class="bg-pink-50 p-4 rounded-xl border border-pink-100 text-center">
+                                <i data-lucide="users" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                                <span class="block text-sm text-slate-500">Profesi</span>
+                                <span class="block font-bold text-slate-800">Guru PAUD</span>
+                            </div>
+                            <div class="bg-pink-50 p-4 rounded-xl border border-pink-100 text-center col-span-2 sm:col-span-1">
+                                <i data-lucide="shopping-bag" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                                <span class="block text-sm text-slate-500">Bisnis</span>
+                                <span class="block font-bold text-slate-800">Shafa Store</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Pengalaman -->
+        <section id="pengalaman" class="py-20 bg-pink-50/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Perjalanan Karir</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Pengalaman Latar Belakang</h3>
+                    <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+
+                    <!-- Pengalaman 1 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-pink-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-bold text-primary bg-pink-50 px-3 py-1 rounded-full">Saat Ini</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-900">Guru PAUD</h4>
+                            <h5 class="text-md font-medium text-slate-600 mb-4">TK Al Hikmah</h5>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Merancang rencana pembelajaran harian (RPPH), mengelola interaksi kelas, dan menciptakan media pembelajaran kreatif guna memfasilitasi perkembangan kognitif, motorik, dan karakter anak usia dini.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Pengalaman 2 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-rose-400 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="store" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-bold text-primary bg-pink-50 px-3 py-1 rounded-full">Saat Ini</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-900">Owner & Pengelola</h4>
+                            <h5 class="text-md font-medium text-slate-600 mb-4">Shafa Store</h5>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Mengelola operasional bisnis, mendesain materi promosi visual, menganalisis kebutuhan pelanggan, dan memastikan kepuasan pembeli dalam setiap transaksi online maupun offline.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Pendidikan -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-bold text-slate-500">Alumni</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-900">S1 Pendidikan Guru PAUD</h4>
+                            <h5 class="text-md font-medium text-slate-600 mb-4">UPI Kampus Purwakarta</h5>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Mempelajari psikologi anak, desain media pembelajaran edukatif, dan metode penelitian kualitatif maupun kuantitatif yang berujung pada publikasi jurnal ilmiah nasional.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Jurnal & Publikasi (Baru) -->
+        <section id="jurnal" class="py-20 bg-pink-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Riset & Karya Ilmiah</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Publikasi Jurnal</h3>
+                    <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                    <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Beberapa publikasi penelitian yang telah saya teliti dan terbitkan di berbagai jurnal akademik nasional.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Jurnal 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden group transform hover:-translate-y-2">
+                        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <i data-lucide="book-open" class="w-32 h-32 text-primary"></i>
+                        </div>
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="inline-flex px-3 py-1 bg-pink-100 text-primary text-xs font-bold rounded-full mb-4 self-start">2024</div>
+                            <h4 class="text-lg font-bold text-slate-900 mb-3 leading-snug flex-grow">Penanaman Nilai Karakter Gemar Membaca melalui Media Buku Cerita Bergambar pada Anak Usia Dini</h4>
+                            <div class="mt-4 border-t border-slate-100 pt-4">
+                                <p class="text-sm text-slate-500 mb-2 font-medium"><span class="text-slate-800">Jurnal:</span> Murhum : Jurnal Pendidikan Anak Usia Dini (Vol 5 No 2)</p>
+                                <p class="text-xs text-slate-500 mb-4"><span class="font-bold text-slate-700">Penulis:</span> Mariya Ulfa Dwi Shafarani, Asep Kurnia Jayadinata, Idat Muqodas</p>
+                                <a href="https://doi.org/10.37985/murhum.v5i2.846" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-medium hover:text-primaryDark transition-colors text-sm">
+                                    Lihat Jurnal <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jurnal 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden group transform hover:-translate-y-2">
+                        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <i data-lucide="users" class="w-32 h-32 text-blue-500"></i>
+                        </div>
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="inline-flex px-3 py-1 bg-blue-100 text-blue-600 text-xs font-bold rounded-full mb-4 self-start">2023</div>
+                            <h4 class="text-lg font-bold text-slate-900 mb-3 leading-snug flex-grow">Dampak Fatherless Terhadap Perkembangan Anak Usia Dini</h4>
+                            <div class="mt-4 border-t border-slate-100 pt-4">
+                                <p class="text-sm text-slate-500 mb-2 font-medium"><span class="text-slate-800">Jurnal:</span> Ceria: Jurnal Program Studi Pendidikan Anak Usia Dini (Vol 12 No 1)</p>
+                                <p class="text-xs text-slate-500 mb-4"><span class="font-bold text-slate-700">Penulis:</span> Hayani Wulandari, Mariya Ulfa Dwi Shafarani</p>
+                                <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-800 transition-colors text-sm">
+                                    Lihat Jurnal <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jurnal 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden group transform hover:-translate-y-2">
+                        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <i data-lucide="file-text" class="w-32 h-32 text-rose-500"></i>
+                        </div>
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="inline-flex px-3 py-1 bg-rose-100 text-rose-600 text-xs font-bold rounded-full mb-4 self-start">2023</div>
+                            <h4 class="text-lg font-bold text-slate-900 mb-3 leading-snug flex-grow">Aroma Suap Menyuap Pemilu 2024 Menguat, Bagaimana Hukum Dalam Islam?</h4>
+                            <div class="mt-4 border-t border-slate-100 pt-4">
+                                <p class="text-sm text-slate-500 mb-2 font-medium"><span class="text-slate-800">Jurnal:</span> Tabsyir: Jurnal Dakwah dan Sosial Humaniora (Vol 4 No 3)</p>
+                                <p class="text-xs text-slate-500 mb-4"><span class="font-bold text-slate-700">Penulis:</span> Hisny Fajrusalam, Kurniasih, Mariya Ulfa D.S., dkk.</p>
+                                <a href="#" class="inline-flex items-center gap-2 text-rose-600 font-medium hover:text-rose-800 transition-colors text-sm">
+                                    Lihat Jurnal <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Portofolio Visual -->
+        <section id="portofolio" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Karya Kreatif</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Galeri Portofolio</h3>
+                    <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                    <p class="mt-4 text-slate-500 max-w-2xl mx-auto">Dokumentasi kegiatan edukasi dan pengembangan visual bisnis.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Portofolio 1 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="relative h-56 overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1512758684632-aa0c11eff6eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="[Image of Branding Store]" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                                    <i data-lucide="image" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-bold text-primary mb-2 tracking-wider">BISNIS & VISUAL</div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-2">Materi Promosi Shafa Store</h4>
+                            <p class="text-slate-600 text-sm line-clamp-3">
+                                Pengembangan desain katalog produk dan materi sosial media untuk menarik audiens.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Portofolio 2 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="relative h-56 overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                                    <i data-lucide="image" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-bold text-accent mb-2 tracking-wider">EDUKASI ANAK</div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-2">Desain Media Pembelajaran</h4>
+                            <p class="text-slate-600 text-sm line-clamp-3">
+                                Merancang alat peraga dan media visual interaktif di TK Al Hikmah untuk menstimulasi kognitif anak.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Kontak -->
+        <section id="kontak" class="py-20 bg-slate-900 relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-pink-500/10 blur-3xl"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Info Kontak -->
+                    <div>
+                        <h2 class="text-sm font-bold text-pink-400 tracking-widest uppercase mb-2">Mari Terhubung</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Punya Pertanyaan atau Ide?</h3>
+                        <p class="text-slate-400 mb-10 text-lg">
+                            Saya sangat terbuka untuk berdiskusi seputar dunia pendidikan anak usia dini, peluang kolaborasi riset, atau urusan bisnis. Jangan ragu untuk menghubungi saya!
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-pink-400 shrink-0">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white font-medium text-lg">Email</h5>
+                                    <a href="mailto:kontak@mariya.com" class="text-slate-400 hover:text-pink-400 transition-colors">kontak@mariya.com (Contoh)</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-pink-400 shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white font-medium text-lg">Lokasi</h5>
+                                    <p class="text-slate-400">Purwakarta, Jawa Barat</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Kontak -->
+                    <div class="bg-white rounded-3xl p-8 shadow-2xl">
+                        <h4 class="text-2xl font-bold text-slate-900 mb-6">Kirim Pesan Singkat</h4>
+                        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Ini adalah versi demo. Pesan belum terkirim sesungguhnya.');">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nama Lengkap</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-pink-500 outline-none transition-all" placeholder="Nama Anda">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Pesan</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-pink-500 outline-none transition-all resize-none" placeholder="Tuliskan pesan Anda..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3.5 bg-primary hover:bg-primaryDark text-white font-bold rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2">
+                                Kirim Pesan <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-slate-500 text-sm text-center md:text-left">
+                &copy; <span id="year"></span> Mariya Ulfa Dwi Shafarani. Hak Cipta Dilindungi.
+            </p>
+            <div class="flex items-center gap-2 text-slate-500 text-sm">
+                Dibuat untuk Portofolio Pendidikan & Bisnis
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Set Tahun Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Inisialisasi Icon Lucide
+        lucide.createIcons();
+
+        // Toggle Menu Mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Efek Scroll Navigasi
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm');
+                header.classList.replace('py-4', 'py-2');
+            } else {
+                header.classList.remove('shadow-sm');
+                header.classList.replace('py-2', 'py-4');
+            }
+        });
+    </script>
+</body>
+</html>
